@@ -1,7 +1,7 @@
 CFLAGS+=  -O0 -g
 OBJECTS = xor_main.o avx_xor.o sse_xor.o xor.o byte_array.o
 
-encrypt: $(OBJECTS)
+xor: $(OBJECTS)
 	$(CC) -o $@ $^ 
 
 libxor.so: sse_xor.o xor.c
